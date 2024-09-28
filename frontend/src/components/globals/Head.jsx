@@ -1,15 +1,22 @@
 import css_header from "../../style/globals/Head";
 import css_sale from "../../style/globals/sale";
-import React from "react";
+import React,{useState} from "react";
 import Logo from '../../img/Logo (1).svg'
+import img from '../../img/Rectangle728.svg'
 
 import CssPage from "../../style/page/Page";
+import Button from "../../style/components/Button";
 const {Conteiner,Color} = CssPage
 const Head = () =>{
-const {Conteiner,LinkConteiner,Link,Phone,CpnteinerSvg} = css_header
+const {Head_Conteiner,LinkConteiner,Link,Phone,CpnteinerSvg,Windo,Item,ItemActive,WindoImg} = css_header
 const {ConteinerSalle,Text,CallBack} = css_sale
+
+const [windo,setWindo] = useState(0)
+
     return(
 <>
+<Color $color={'rgb(69, 79, 91)'}>
+<Conteiner>
 
 <ConteinerSalle>
 <Text>
@@ -17,19 +24,21 @@ const {ConteinerSalle,Text,CallBack} = css_sale
 
 </Text>
 <CallBack>Обратный звонок</CallBack>
-</ConteinerSalle>
+</ConteinerSalle></Conteiner></Color>
 <Conteiner>
+<Head_Conteiner>
 <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
 <img width= '50.4px' height= '42px' src={Logo} alt="" />
 <LinkConteiner>
 <Link href="#">
 Главная
 </Link>
-<Link>
-Каталог <span><svg width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none" >
-	<desc>
-			Created with Pixso.
-	</desc>
+<Link  onClick={() =>windo === 0 ? setWindo(1): setWindo(0)}>
+Каталог 
+<span style={{marginLeft:'10px'}}>
+	{windo === 0 ?
+	<svg width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none" >
+	
 	<defs>
 		<clipPath id="clip3_7575">
 			<rect id="Frame" rx="-0.500000" width="13.000000" height="13.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
@@ -39,8 +48,41 @@ const {ConteinerSalle,Text,CallBack} = css_sale
 	<g clip-path="url(#clip3_7575)">
 		<path id="Vector" d="M2.33 5.25L7 9.91L11.66 5.25" stroke="#161C24" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linejoin="round" stroke-linecap="round"/>
 	</g>
-</svg>
+</svg>:
+ <svg style={{rotate:'180deg'}} width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none" >
+	
+ <defs>
+	 <clipPath id="clip3_7575">
+		 <rect id="Frame" rx="-0.500000" width="13.000000" height="13.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+	 </clipPath>
+ </defs>
+ <rect id="Frame" rx="-0.500000" width="13.000000" height="13.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+ <g clip-path="url(#clip3_7575)">
+	 <path id="Vector" d="M2.33 5.25L7 9.91L11.66 5.25" stroke="rgb(66, 149, 228)" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linejoin="round" stroke-linecap="round"/>
+ </g>
+</svg>}
+	
 </span>
+
+
+<Windo style={windo === 1 ?{ display:'flex'}:{ display:'none'}}>
+<div style={{display:'flex', flexDirection:'column'}}>
+<Item>
+<ItemActive>Накладные электронные замки</ItemActive></Item>
+<Item>Врезные электронные замки</Item>
+<Item>Замки для квартиры</Item>
+<Item>Замки для дома</Item>
+<Item>Замки для отелей</Item>
+<Item>Замки для офиса</Item>
+<Item>Замки для шкафчиков</Item>
+<Item>Замки для раздевалок</Item>
+<Button style={{width:' 164px', height:'40px', padding:'7px 32px', textAlign: 'center'}}>Смотреть все</Button>
+</div>
+
+<WindoImg img={img}/>
+</Windo>
+
+
 </Link>
 <Link href="#">
 Оптовая продажа
@@ -99,9 +141,9 @@ const {ConteinerSalle,Text,CallBack} = css_sale
 </CpnteinerSvg>
 
 </div>
+</Head_Conteiner>
+
 </Conteiner>
-
-
 </>
 
     )

@@ -12,25 +12,22 @@ const Products = () =>{
 	useEffect(()=>{  let listView = [list[view],list[view+1],list[view+2],list[view+3]]  },{view})
 	const minus =()=>{
         
-	
+		console.log(view)
        
-        if (view-4 < 0){
-            setView(list.length-1)
+        if (view-1 >= 0 ){
+			setView(view-1)
         }
-        else{
-            setView(view-1)
-        }
+        
+		
     }
     const plus =()=>{
         
-        
-        if (view+4 > list.length-1){
-            console.log(2)
-            setView(0)
-        }
-        else{
+        console.log(view)
+        if (view+4 <= list.length-1){
+            
             setView(view+1)
         }
+        
        
     }
 	return(

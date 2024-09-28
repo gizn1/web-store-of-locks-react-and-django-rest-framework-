@@ -12,9 +12,9 @@ const {Conteiner,Color} = CssPage
 return(
     <>
     
-    <Conteiner>
+    
     <Head></Head>
-    </Conteiner>
+    
     <Color $color={'rgb(247, 247, 247)'}>
     <Conteiner>
     
