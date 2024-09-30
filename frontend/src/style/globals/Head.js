@@ -10,7 +10,14 @@ const css_header = {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
-
+    @media(max-width:430px) {
+padding: 0;
+margin: 0;
+display: block;
+margin: 0 16px;
+padding: 19px 0;
+height: 36px;
+}
 
 
 
@@ -20,7 +27,9 @@ const css_header = {
     display: flex;
     justify-content: space-between;
 margin-left: 100px;
-
+@media(max-width:430px) {
+display: none;
+}
 
     `,
 
@@ -37,16 +46,41 @@ cursor: pointer;
     margin-left: 32px;
 
 }
-`,
-Phone: styled.div`
-margin-left: 8px;
-margin-right: 35px;
 
+`,
+Logo: styled.div`
+@media(max-width:430px) {
+display: none;
+}
+`,
+
+Phone: styled.div`
+
+display: flex;
+align-items: center;
+margin-right: 35px;
+@media(max-width:430px) {
+display: none;
+}
 `,
 CpnteinerSvg: styled.div`
 max-width: 92px;
 display: flex;
 justify-content: space-between;
+
+`,
+Svg: styled.a`
+&+&{
+    margin-left: 24px;
+}
+`,
+Menu: styled.div`
+display: none;
+
+@media(max-width:430px) {
+display: block;
+float: left;
+}
 `,
 Windo: styled.div`
 padding: 32px;

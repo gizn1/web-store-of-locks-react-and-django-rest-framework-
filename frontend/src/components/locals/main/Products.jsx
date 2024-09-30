@@ -8,7 +8,7 @@ const Products = () =>{
 	const [view,setView] = useState(0)
 	let listView = [list[view],list[view+1],list[view+2],list[view+3]]
 	console.log(listView)
-    const {TopLine,Headline,ConteinerButton,Stick,Conteiner,Item,ItemImage,State,Present,Sale,ItemInfo,ItemText,ConteinerPrice,PriceNow,PriceOld} =ProductsCss
+    const {TopLine,Headline,ConteinerButton,Stick,Conteiner,Item,ItemImage,State,Present,ConteinerProducts,Sale,ItemInfo,ItemText,ConteinerPrice,PriceNow,PriceOld} =ProductsCss
 	useEffect(()=>{  let listView = [list[view],list[view+1],list[view+2],list[view+3]]  },{view})
 	const minus =()=>{
         
@@ -31,7 +31,7 @@ const Products = () =>{
        
     }
 	return(
-<div style = {{margin:'0 98px'}}>
+<ConteinerProducts>
 
 <TopLine>
 <Headline>Наши популярные продукты</Headline>
@@ -101,7 +101,7 @@ const Products = () =>{
 </Conteiner>
 
 
-</div>
+</ConteinerProducts>
 
     )
 }

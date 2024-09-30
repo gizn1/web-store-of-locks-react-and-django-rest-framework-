@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 
 const ProductsCss = {
-
+ConteinerProducts: styled.div`
+margin: 0 98px;
+@media(max-width:430px) {
+margin: 0 16px;
+}
+`,
 TopLine: styled.div`
 display: flex;
 align-items: center;
@@ -19,11 +24,22 @@ letter-spacing: 0%;
 text-align: left;
 margin-top: 100px;
 margin-bottom: 64px;
+@media(max-width:430px) {
+
+color: rgb(22, 28, 36);
+font-family: SF Pro Text;
+font-size: 22px;
+font-weight: 600;
+line-height: 34px;
+letter-spacing: 0%;
+text-align: left;
+}
     `,
 ConteinerButton: styled.div`
 
 display: flex;
 padding-top: 40px;
+
 `,
 Stick:styled.button`
 stroke: rgb(196, 205, 213);
@@ -39,6 +55,11 @@ background: none;
 &+&{
     margin-left: 40px;
 }
+@media(max-width:430px) {
+
+
+display: none;
+}
 `,
 
 Conteiner: styled.div`
@@ -46,10 +67,16 @@ display: flex;
 
 justify-content: space-between;
 margin-bottom: 96px;
-
+@media(max-width:430px) {
+    margin-bottom: 36px;
+}
 `,
 Item: styled.a`
-
+@media(max-width:430px) {
+&+&{
+    display: none;
+}
+}
 
 `,
 ItemImage: styled.div`

@@ -4,7 +4,7 @@ import product_img from '../../../img/Rectangle 751.jpeg'
 import product_img2 from '../../../img/Rectangle 19.svg'
 
 const SliderProduct = () =>{
-    const {Active, Point ,Pref, Next, ConteinerControlers,Alb,PointActive ,Des,Img,ButtonPay ,PriceOld ,PriceNow ,PriceConteiner, TitlePrice, Descriptchen,Descriptchen2 ,Titele ,Conteiner} = ProductSlider_css
+    const {Active, Point ,Pref, Next,ImgSmall, ConteinerControlers,Alb,PointActive ,Des,Img,ButtonPay ,PriceOld ,PriceNow ,PriceConteiner, TitlePrice, Descriptchen,Descriptchen2 ,Titele ,Conteiner} = ProductSlider_css
     
     const list = [[product_img,'Golden Soft ',' GS-200Z-5 для офиса' ,'Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы.','Подходит для установки на деревянную/межкомнатную дверь.','33 000₽','37 000₽'],
     [product_img2,'Golden Soft', 'S-200Z-5 для офиса' ,'Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы.','Подходит для установки на деревянную/межкомнатную дверь.','34 000₽','37 000₽'],
@@ -69,6 +69,8 @@ const SliderProduct = () =>{
     return(
         <>
         <Conteiner>
+        <ImgSmall>
+        <img height={'312px'} width={'370px'} src={img} alt="" style={{ backgroundColor: "#ffffff;" }}/></ImgSmall>
         <Img>
         <img height={'663px'} src={img} alt="" style={{ backgroundColor: "#ffffff;" }}/></Img>
         <div className="">
@@ -111,9 +113,9 @@ const SliderProduct = () =>{
 	</g>
 </svg>
 </Pref>
-
+<div style={{    display: 'flex', alignItems: 'center'}} className="">
 {listPoint.map(item => (item))}
-        
+</div>
 
         <Next onClick={plus}> <svg width="32.000000" height="32.000000" viewBox="0 0 32 32" fill="none">
 	<defs>

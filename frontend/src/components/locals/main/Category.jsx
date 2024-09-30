@@ -6,7 +6,7 @@ import bg1 from '../../../img/фото1.jpeg'
 import bg2 from '../../../img/фото2.jpeg'
 import bg3 from '../../../img/фото3.jpeg'
 const Category = () =>{
-    const {ButtonItem,ItemTitle,ItemTextConteiner,Item,Conteiner,Headline}  = CategoryCss
+    const {ButtonItem,ItemTitle,ItemTextConteiner,Item,Conteiner,Headline,ButtonSmall,ButtonBig}  = CategoryCss
     return(<>
     
     <Headline>Категории</Headline>
@@ -48,7 +48,10 @@ const Category = () =>{
     </Item>
 
     </Conteiner>
-    <Button style={{marginTop:'10px',marginLeft:'auto',marginRight:'auto',display: 'flex'}}>Все категории</Button>
+    <ButtonBig>
+    <Button style={{marginTop:'10px',marginLeft:'auto',marginRight:'auto',display: 'flex'}}>Все категории</Button></ButtonBig>
+    <ButtonSmall>
+    <Button style={{marginTop:'10px',marginLeft:'auto',marginRight:'auto',display: 'flex',padding:'15px 118px'}}>Все категории</Button></ButtonSmall>
     </>)
 }
 export default Category

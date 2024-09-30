@@ -12,7 +12,10 @@ const ProductSlider_css = {
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 32px;
-
+    @media(max-width:430px) {
+    /* H1 mob */
+    display: none;
+    }
     `,
 
     Conteiner:styled.div`
@@ -21,10 +24,25 @@ const ProductSlider_css = {
     justify-content: center;
     padding-top: 171px;
     align-items: center;
-    
+    @media(max-width:430px) {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    padding-top: 0;
+    margin-bottom: 34px;
+}
+    `,
+    ImgSmall: styled.div`
+    display: none;
+    @media(max-width:430px) {
+    display: block;
+    }
     `,
     Img:styled.div`
     background: rgb(247, 247, 247);
+    @media(max-width:430px) {
+    display: none;
+    }
     `,
     Titele:styled.div`
     width: 604px;
@@ -37,6 +55,18 @@ line-height: 62px;
 letter-spacing: 0%;
 text-align: left;
 margin-bottom: 20px;
+
+@media(max-width:430px) {
+    /* H1 mob */
+    width: 345px;
+color: rgb(22, 28, 36);
+font-family: SF Pro Text;
+font-size: 22px;
+font-weight: 600;
+line-height: 34px;
+letter-spacing: 0%;
+text-align: left;
+    }
     `,
    
    
@@ -64,6 +94,15 @@ margin-bottom: 20px;
     letter-spacing: 0%;
     text-align: left;
     margin-right: 12px;
+    @media(max-width:430px) {
+        color: rgb(22, 28, 36);
+font-family: SF Pro Text;
+font-size: 18px;
+font-weight: 600;
+line-height: 21px;
+letter-spacing: 0%;
+text-align: left;
+    }
     `,
     PriceOld:styled.div`
     color: rgb(164, 164, 164);
@@ -74,6 +113,16 @@ margin-bottom: 20px;
     letter-spacing: 0%;
     text-align: left;
     text-decoration-line: line-through;
+    @media(max-width:430px) {
+        color: rgb(164, 164, 164);
+font-family: SF Pro Text;
+font-size: 14px;
+font-weight: 300;
+line-height: 17px;
+letter-spacing: 0%;
+text-align: left;
+text-decoration-line: line-through;
+    }
     `,
     ButtonPay:styled.button`
     
@@ -88,6 +137,16 @@ margin-bottom: 20px;
     padding: 12px 37px;
     background: rgb(66, 149, 228);
     border: transparent;
+    @media(max-width:430px) {
+        padding: 15px 99px;
+        color: rgb(255, 255, 255);
+font-family: SF Pro Display;
+font-size: 16px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0%;
+text-align: left;
+    }
     `,
 
     ConteinerControlers: styled.div`
@@ -95,6 +154,10 @@ margin-bottom: 20px;
     align-items: center;
     justify-content: center;
     padding-bottom: 52px;
+    @media(max-width:430px) {
+        justify-content: space-between;
+        padding-bottom: 42px;
+    }
     `,
     Next : styled.button`
     margin-right: 12px;
@@ -114,6 +177,10 @@ margin-bottom: 20px;
     border: transparent;
     margin: 0 12px ;
     padding: 0;
+    @media(max-width:430px) {
+        margin: 0 8px ;
+    /* H1 mob */
+    }
     `,
     PointActive: styled.div`
     width: 8px;
@@ -128,7 +195,12 @@ margin-bottom: 20px;
     margin: 0 12px ;
     border: 1px solid rgb(173, 215, 255);
     border-radius: 100%;
+    @media(max-width:430px) {
+        margin: 0;
+    /* H1 mob */
+    }
     `,
+
    Des: styled.div`
    color: rgb(69, 79, 91);
     font-family: SF Pro Text;
@@ -138,7 +210,12 @@ margin-bottom: 20px;
     letter-spacing: 0%;
     width: 287px;
     text-align: left;
-    margin-bottom: 16px;`,
+    margin-bottom: 16px;
+    @media(max-width:430px) {
+    /* H1 mob */
+    display: none;
+    }
+    `,
 
 
 

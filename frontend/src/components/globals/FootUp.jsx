@@ -4,7 +4,7 @@ import CssPage from "../../style/page/Page";
 import Button from "../../style/components/Button";
 
 const FootUp = () =>{
-const {Imput, ConteinerForm, Text, Headline, Conteiner} = FooterUp
+const {Imput, ConteinerForm, Text, Headline, Conteiner,Small,Big} = FooterUp
 const {Color} = CssPage
 return(
 <>
@@ -17,7 +17,11 @@ return(
 <ConteinerForm>
 <Imput></Imput>
 <Imput></Imput>
-<Button type="submit" style={{padding:'12px 70px'}}>Отправить</Button>
+<Big>
+<Button type="submit" style={{padding:'12px 70px'}}>Отправить</Button></Big>
+
+<Small>
+<Button type="submit" style={{padding:'12px 132px'}}>Отправить</Button></Small>
 </ConteinerForm>
 </Conteiner>
 </Color>
