@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import Main from './components/page/main';
 import PageCategory from './components/page/Category';
+import KatalogPage from './components/page/Katalog';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PageCategory />
+    <KatalogPage />
   </React.StrictMode>
 );
 
