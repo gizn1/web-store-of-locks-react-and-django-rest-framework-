@@ -40,7 +40,7 @@ return(
     
 
     <Conteiner>
-    <Products ></Products>
+    <Products headline = {'Наши популярные продукты'}></Products>
     </Conteiner>
 
     <Foot></Foot>

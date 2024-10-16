@@ -124,7 +124,7 @@ return(
   
 <label for={index} style={{margin:'0 8px 0 8px',width: '180px'}}>
 {item[0]}</label>
-<FilterMainOpsionItemAmount>({item[1]})</FilterMainOpsionItemAmount>
+<FilterMainOpsionItemAmount style={{display:'flex'}}>({item[1]})</FilterMainOpsionItemAmount>
 </FilterMainOpsionItem>
 </div>
 )})}

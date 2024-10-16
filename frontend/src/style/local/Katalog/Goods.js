@@ -1,6 +1,12 @@
 import styled from "styled-components"
 
 const GoodsCss = {
+    Conteiner: styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 34px;
+    
+    `,
     HeadLine: styled.div`
         margin-left: 100px;
         
@@ -28,6 +34,25 @@ letter-spacing: 0%;
 text-align: left;
 margin-left: 12px;
     `,
+
+    Comments: styled.div`
+    display: flex;
+    width: 192px;
+    justify-content: space-between;
+    color: rgb(69, 79, 91);
+font-family: SF Pro Text;
+font-size: 13px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0%;
+text-align: left;
+    `,
+Stars: styled.div`
+width: 104px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+`
 }
 
 export default GoodsCss

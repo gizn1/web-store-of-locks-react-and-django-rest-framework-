@@ -2,7 +2,7 @@ import React, {useState,useEffect}from "react";
 import ProductsCss from "../../../style/local/main/Products";
 import icon from '../../../img/Rectangle2.jpeg'
 
-const Products = () =>{
+const Products = (props) =>{
 	let list = [[1,'Дверной Замок Golden Soft для отеля','32 000','37 000',icon],[1,'Дверной Замок Golden Soft для отеля','33 000','37 000',icon],
 	[1,'Дверной Замок Golden Soft для отеля','35 000','37 000',icon],[1,'Дверной Замок Golden Soft для отеля','33 000','38 000',icon],[1,'Дверной Замок Golden Soft для отеля','33 000','38 000',icon]]
 	const [view,setView] = useState(0)
@@ -34,7 +34,7 @@ const Products = () =>{
 <ConteinerProducts>
 
 <TopLine>
-<Headline>Наши популярные продукты</Headline>
+<Headline>{props.headline}</Headline>
 <ConteinerButton>
 <Stick onClick={minus}><svg width="40.000000" height="40.000000" viewBox="0 0 40 40">
 	

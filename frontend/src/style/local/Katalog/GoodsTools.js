@@ -5,7 +5,7 @@ const GoodsToolsCss = {
 
     ToolsConteriner: styled.div`
         display: flex;
-        width: 927px;
+        
         
     justify-content: space-between;
     `,
