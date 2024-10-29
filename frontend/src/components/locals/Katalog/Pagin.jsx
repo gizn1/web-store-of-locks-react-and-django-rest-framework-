@@ -1,12 +1,38 @@
 import React from "react";
 import PaginCss from "../../../style/local/Katalog/Pagin";
+import { useLocation,Link } from 'react-router-dom'
 
 const Pagin = () =>{
     const {ItemConteiner,Item,Conteiner} = PaginCss
+	const location = useLocation()
+  	const { from } = location.state
+	const count = 15
+
+	const ShowPages = ()=>{
+		let arr =[]
+		for (let i=from; i != count; i++){
+			if ( i > from+5){
+				arr.push('...')
+				arr.push(<Link to="/Katalog" state={{ from: count-1 }}><Item >{count-1}</Item></Link>)
+				break
+			}
+
+			console.log(from === i)
+			if( from === i){
+				arr.push(<Item active>{i+1}</Item>)
+			}
+			else{
+				arr.push(<Link to="/Katalog" state={{ from: i }}><Item >{i+1}</Item></Link>)
+			}
+			
+		}
+		return(arr)
+	}
 return(
 
     <>
     <Conteiner>
+		
     <svg style={{marginLeft:'24px'}} width="41.000000" height="40.000000" viewBox="0 0 41 40" fill="none" >
 	<defs>
 		<clipPath id="clip41_1730">
@@ -20,10 +46,8 @@ return(
 </svg>
 
 <ItemConteiner>
-<Item active >1</Item>
-<Item active>1</Item>
-<Item>1</Item>
-<Item>1</Item>
+	{ShowPages() }
+
 </ItemConteiner>
 <svg style={{rotate:"180deg", marginRight:'24px'}} width="41.000000" height="40.000000" viewBox="0 0 41 40" fill="none" >
 	<defs>

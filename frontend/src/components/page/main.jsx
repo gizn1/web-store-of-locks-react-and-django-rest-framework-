@@ -7,14 +7,18 @@ import State from "../locals/main/State";
 import Why from "../locals/main/Why";
 import Category from "../locals/main/Category";
 import Products from "../locals/main/Products";
+import { Link } from "react-router-dom";
 const Main = () =>{
 const {Conteiner,Color} = CssPage
+
 return(
     <>
     
     
     <Head></Head>
-    
+    <Link to="/Katalog" state={{ from: 0 }}>
+  Next Step
+</Link>
     <Color $color={'rgb(247, 247, 247)'}>
     <Conteiner>
     

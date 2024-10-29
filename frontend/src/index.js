@@ -6,11 +6,32 @@ import Main from './components/page/main';
 import PageCategory from './components/page/Category';
 import KatalogPage from './components/page/Katalog';
 import reportWebVitals from './reportWebVitals';
-
+import CartGoods from './components/page/cartGoods';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <CartGoods/>,
+  },
+  {
+    path: "/Katalog",
+    element: <KatalogPage/>,
+  },
+  {
+    path: "/Category",
+    element: <PageCategory/>,
+  }
+]);
+
+
 root.render(
   <React.StrictMode>
-    <KatalogPage />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
