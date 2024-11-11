@@ -1,6 +1,17 @@
-from .models import Product
+from .models import Product,ProductCategory
 from rest_framework import serializers
-class SnippetSerializer(serializers.ModelSerializer):
+
+
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ['id', 'title', 'code', 'linenos', 'language', 'style']
+        fields = ['id', 'title', 'price', 'oldPrice', 'category',
+                  'WorkWith', 'description', 'pictureForDescription','rating']
+
+
+class ProductCategorySerializer(serializers.ModelSerializer):
+
+    class Meta:
+
+        model = ProductCategory
+        fields = ['id', 'title', 'image']
