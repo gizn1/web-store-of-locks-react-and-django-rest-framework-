@@ -1,14 +1,26 @@
 import React,{useState,useEffect} from "react";
 import CategoryCss from "../../../style/local/Category/Category";
-import bg from '../../../img/фото.jpeg'
-import bg1 from '../../../img/фото1.jpeg'
-import bg2 from '../../../img/фото2.jpeg'
+
 import Button from "../../../style/components/Button";
 import styled from "styled-components";
-const CategoryItem = () =>{
+import { Link ,} from "react-router-dom";
+const CategoryItem = (props) =>{
 const {ItemText,ItemImg,Item,CategoryConteiner,Headline} = CategoryCss
-let arr = [[bg,'Накладные электронные замки1'],[bg1,'Накладные электронные замки2'],[bg,'Накладные электронные замки3'],
-[bg,'Накладные электронные замки4'],[bg,'Накладные электронные замки5'],[bg2,'Накладные электронные замки6'],[bg,'Накладные электронные замки6'],[bg,'Накладные электронные замки6'],[bg,'Накладные электронные замки6'],[bg,'Накладные электронные замки6']]
+
+
+
+let category = [1,2]
+
+
+if( props.data != 0){
+    category = props.data.data
+}
+
+
+
+
+
+
 
 const [click,setClick] = useState(8)
 
@@ -20,20 +32,20 @@ return(
 
     <CategoryConteiner>
        
-        {arr.map((item,index)=>{
+        {category.map((item,index)=>{
 return(
-    <div  style={   index < click ?{}:{display:'none'} } >
+    <Link  to={'../katalog/'+item.title} state={{from:0,category_id:item.id}} style={   index < click ?{}:{display:'none'} } >
 <Item  style={   index%4 == 0 ?{paddingLeft:'0'}:{paddingLeft:'30px'} }  >
 
-    <ItemImg  $image = {item[0]}/>
-    <ItemText>{item[1]}</ItemText>
-    </Item></div>)
+    <ItemImg  $image = {item.image}/>
+    <ItemText>{item.title}</ItemText>
+    </Item></Link>)
         })}
     
     
     
     </CategoryConteiner>
-    <Button onClick={()=>{click === 8 ?setClick(arr.length):setClick(8)}} style={{margin:'0 auto',display: 'flex'}}>{click === 8 ?'Посмтреть все':'убрать'}</Button>
+    <Button onClick={()=>{click === 8 ?setClick(category.length):setClick(8)}} style={{margin:'0 auto',display: 'flex'}}>{click === 8 ?'Посмтреть все':'убрать'}</Button>
     </>
 )
 
