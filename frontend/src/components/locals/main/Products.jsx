@@ -7,7 +7,7 @@ const Products = (props) =>{
 	[1,'Дверной Замок Golden Soft для отеля','35 000','37 000',icon],[1,'Дверной Замок Golden Soft для отеля','33 000','38 000',icon],[1,'Дверной Замок Golden Soft для отеля','33 000','38 000',icon]]
 	const [view,setView] = useState(0)
 	let listView = [list[view],list[view+1],list[view+2],list[view+3]]
-	console.log(listView)
+	
     const {TopLine,Headline,ConteinerButton,Stick,Conteiner,Item,ItemImage,State,Present,ConteinerProducts,Sale,ItemInfo,ItemText,ConteinerPrice,PriceNow,PriceOld} =ProductsCss
 	useEffect(()=>{  let listView = [list[view],list[view+1],list[view+2],list[view+3]]  },{view})
 	const minus =()=>{

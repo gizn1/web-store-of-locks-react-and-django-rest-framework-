@@ -7,7 +7,7 @@ const GoodsTols = (props) =>{
         <>
         <ToolsConteriner>
         <Filters>
-            {console.log(props.value)}
+            
             {props.value != undefined ? props.value.filter(item => !item[2]).map(item=>{
                 return(
                     <ItemFilter>{item[0]} < svg style={{marginLeft:'10px'}} width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none" >
@@ -23,7 +23,7 @@ const GoodsTols = (props) =>{
                 </svg>
                 </ItemFilter>
                 )
-            }): console.log(props.value)}
+            }): ''}
        
         </Filters>
         <div style={{position:'relative',}}>

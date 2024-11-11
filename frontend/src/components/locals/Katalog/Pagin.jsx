@@ -17,7 +17,7 @@ const Pagin = () =>{
 				break
 			}
 
-			console.log(from === i)
+			
 			if( from === i){
 				arr.push(<Item active>{i+1}</Item>)
 			}
